@@ -62,7 +62,21 @@
 
 ## 📦 Installation
 
-### Option 1: From Source (Recommended)
+### Option 1: Pre-built Binaries (Easiest)
+
+> **No Rust required!** Download, extract, and run.
+
+1. Go to [**Releases**](https://github.com/Brutus1066/QuickTransform/releases)
+2. Download `QuickTransform-v1.0.0-windows-x64.zip`
+3. Extract to any folder
+4. Run `qt.exe` (CLI) or `qt-gui.exe` (GUI)
+
+| File | Size | Description |
+|------|------|-------------|
+| `qt.exe` | ~1 MB | Command-line tool |
+| `qt-gui.exe` | ~4 MB | Graphical interface |
+
+### Option 2: From Source
 
 ```bash
 # Clone the repository
@@ -78,10 +92,6 @@ cargo build --release --features gui
 # Install to system
 cargo install --path .
 ```
-
-### Option 2: Pre-built Binaries
-
-Download from [Releases](https://github.com/Brutus1066/QuickTransform/releases).
 
 ---
 
