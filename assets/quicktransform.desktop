@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=QuickTransform
+GenericName=Encoder/Decoder/Hasher
+Comment=Lightning-fast encoder, decoder, and hasher tool
+Exec=qt-gui
+Icon=quicktransform
+Terminal=false
+Categories=Utility;Development;
+Keywords=encoder;decoder;hash;base64;sha256;password;uuid;
+StartupNotify=true

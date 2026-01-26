@@ -1,0 +1,57 @@
+[package]
+name = "quicktransform"
+version = "1.0.0"
+edition = "2021"
+authors = ["LAZYFROG <contact@kindware.dev>"]
+description = "Lightning-fast encoder/decoder/hasher CLI & GUI tool"
+license = "MIT"
+repository = "https://github.com/Brutus1066/quicktransform"
+homepage = "https://kindware.dev"
+keywords = ["cli", "encoder", "hash", "base64", "utility"]
+categories = ["command-line-utilities", "encoding"]
+readme = "README.md"
+build = "build.rs"
+
+[dependencies]
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Encoding/Hashing
+base64 = "0.21"
+hex = "0.4"
+sha2 = "0.10"
+md-5 = "0.10"
+sha1 = "0.10"
+urlencoding = "2.1"
+html-escape = "0.2"
+
+# Generation
+uuid = { version = "1.6", features = ["v4"] }
+rand = "0.8"
+
+# GUI (optional)
+eframe = { version = "0.29", optional = true, default-features = false, features = ["default_fonts", "glow", "persistence"] }
+image = { version = "0.25", optional = true, default-features = false, features = ["png", "ico"] }
+rfd = { version = "0.14", optional = true }
+
+[build-dependencies]
+winresource = "0.1"
+
+[features]
+default = []
+gui = ["eframe", "image", "rfd"]
+
+[[bin]]
+name = "qt"
+path = "src/main.rs"
+
+[[bin]]
+name = "qt-gui"
+path = "src/gui_main.rs"
+required-features = ["gui"]
+
+[profile.release]
+lto = true
+strip = true
+opt-level = "z"
+codegen-units = 1
