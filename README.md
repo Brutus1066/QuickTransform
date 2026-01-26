@@ -1,16 +1,57 @@
-# QuickTransform
+<p align="center">
+  <img src="https://img.shields.io/badge/Rust-1.70%2B-orange?style=for-the-badge&logo=rust&logoColor=white" alt="Rust">
+  <img src="https://img.shields.io/badge/CLI-Enabled-green?style=for-the-badge&logo=windowsterminal&logoColor=white" alt="CLI">
+  <img src="https://img.shields.io/badge/GUI-Included-blue?style=for-the-badge&logo=windows&logoColor=white" alt="GUI">
+</p>
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-blue.svg)]()
+<p align="center">
+  <img src="https://img.shields.io/github/license/Brutus1066/QuickTransform?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/stars/Brutus1066/QuickTransform?style=flat-square" alt="Stars">
+  <img src="https://img.shields.io/github/forks/Brutus1066/QuickTransform?style=flat-square" alt="Forks">
+  <img src="https://img.shields.io/github/issues/Brutus1066/QuickTransform?style=flat-square" alt="Issues">
+  <img src="https://img.shields.io/github/last-commit/Brutus1066/QuickTransform?style=flat-square" alt="Last Commit">
+</p>
 
-**Lightning-fast encoder/decoder/hasher for the command line and desktop.**
+<h1 align="center">⚡ QuickTransform</h1>
 
-> **LAZYFROG-kindware.dev** | Free & Open Source
+<p align="center">
+  <strong>Lightning-fast encoder/decoder/hasher for the command line and desktop</strong>
+</p>
+
+<p align="center">
+  <a href="#-features">Features</a> •
+  <a href="#-screenshots">Screenshots</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-usage">Usage</a> •
+  <a href="#-commands">Commands</a> •
+  <a href="#-building">Building</a>
+</p>
 
 ---
 
-## Screenshots
+## 💡 Why QuickTransform?
+
+**The Problem:** You need to encode, decode, or hash data quickly. Online tools are slow, track you, or require internet.
+
+**The Solution:** One command, instant result. Works 100% offline. No data leaves your machine. CLI for power users, GUI for everyone else.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🔐 **Encode/Decode** | Base64, Hex, URL, HTML entities |
+| 🔒 **Hash** | MD5, SHA1, SHA256, SHA512 (files or strings) |
+| 🎲 **Generate** | UUIDs, secure passwords, random bytes |
+| 💻 **Cross-platform** | Windows, Linux, macOS |
+| 📟 **Pipe-friendly** | Works seamlessly with stdin/stdout |
+| 🖥️ **GUI included** | Modern interface with dark/light themes |
+| 🔌 **Zero network** | All operations offline - no data leaks |
+
+---
+
+## 📸 Screenshots
 
 | Dark Theme | Light Theme |
 |------------|-------------|
@@ -19,21 +60,9 @@
 
 ---
 
-## Features
+## 📦 Installation
 
-- **Encode/Decode**: Base64, Hex, URL, HTML entities
-- **Hash**: MD5, SHA1, SHA256, SHA512 (files or strings)
-- **Generate**: UUIDs, secure passwords, random bytes
-- **Cross-platform**: Windows, Linux, macOS
-- **Pipe-friendly**: Works seamlessly with stdin/stdout
-- **GUI included**: Modern graphical interface with dark/light themes
-- **Zero network**: All operations offline - no data leaks
-
----
-
-## Installation
-
-### From Source
+### Option 1: From Source (Recommended)
 
 ```bash
 # Clone the repository
@@ -50,15 +79,15 @@ cargo build --release --features gui
 cargo install --path .
 ```
 
-### Pre-built Binaries
+### Option 2: Pre-built Binaries
 
 Download from [Releases](https://github.com/Brutus1066/QuickTransform/releases).
 
 ---
 
-## Usage
+## 🚀 Usage
 
-### Encoding & Decoding
+### 🔄 Encoding & Decoding
 
 ```bash
 # Base64
@@ -78,7 +107,7 @@ qt html "<script>alert(1)</script>"
 qt htmld "&lt;script&gt;"
 ```
 
-### Hashing
+### 🔒 Hashing
 
 ```bash
 # Hash a file
@@ -94,7 +123,7 @@ qt hash document.pdf
 qt hash -s "test"
 ```
 
-### Generation
+### 🎲 Generation
 
 ```bash
 # UUID
@@ -110,7 +139,7 @@ qt randhex 32                     # 64 hex characters (32 bytes)
 qt randb64 32                     # 32 bytes as base64
 ```
 
-### Pipe Support
+### 📟 Pipe Support
 
 ```bash
 echo "secret" | qt b64
@@ -118,7 +147,7 @@ cat file.txt | qt sha256
 curl -s https://example.com | qt md5
 ```
 
-### GUI Mode
+### 🖥️ GUI Mode
 
 ```bash
 # Launch graphical interface
@@ -127,7 +156,7 @@ qt-gui
 
 ---
 
-## Command Reference
+## 📋 Commands
 
 | Command | Description | Example |
 |---------|-------------|---------|
@@ -152,7 +181,7 @@ qt-gui
 
 ---
 
-## Building
+## 🔧 Building
 
 ### Requirements
 
@@ -177,8 +206,40 @@ cargo test
 
 ---
 
-## License
+## 📊 Technical Details
+
+| Aspect | Detail |
+|--------|--------|
+| **Language** | Rust 🦀 |
+| **GUI Framework** | egui/eframe |
+| **Dependencies** | Minimal, audited crates |
+| **Binary Size** | ~3MB (CLI), ~8MB (GUI) |
+| **Offline** | 100% - no network calls |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues and pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
-**LAZYFROG-kindware.dev** | Free & Open Source
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/Brutus1066">Brutus1066</a> at <a href="https://kindware.dev">LAZYFROG-kindware.dev</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Brutus1066/QuickTransform/stargazers">⭐ Star this repo</a> if you find it useful!
+</p>
