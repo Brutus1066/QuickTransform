@@ -108,8 +108,8 @@ fn main() -> Result<(), eframe::Error> {
         APP_NAME,
         eframe::NativeOptions {
             viewport: egui::ViewportBuilder::default()
-                .with_inner_size([640.0, 600.0])
-                .with_min_inner_size([520.0, 480.0])
+                .with_inner_size([640.0, 680.0])
+                .with_min_inner_size([520.0, 560.0])
                 .with_icon(icon)
                 .with_title(APP_NAME),
             ..Default::default()
@@ -122,7 +122,11 @@ fn main() -> Result<(), eframe::Error> {
 }
 
 fn load_icon() -> egui::IconData {
+    #[cfg(target_os = "windows")]
     let bytes = include_bytes!("../assets/lazyfrog-kindware.ico");
+    #[cfg(not(target_os = "windows"))]
+    let bytes = include_bytes!("../assets/lazyfrog-kindware-background.png");
+
     image::load_from_memory(bytes)
         .map(|img| {
             let rgba = img.to_rgba8();

@@ -2,7 +2,6 @@
 //! Embeds Windows icon and sets metadata
 
 fn main() {
-    // Windows-specific: embed icon
     #[cfg(target_os = "windows")]
     {
         if std::path::Path::new("assets/lazyfrog-kindware.ico").exists() {
