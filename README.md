@@ -14,6 +14,15 @@ QuickTransform is a fast, offline utility for encoding, decoding, hashing, and g
 - **GUI** for quick visual operations
 - **Cross-platform** - Windows, Linux, macOS
 
+## Why QuickTransform?
+
+Online encoding/hashing tools are convenient but risky:
+- They may log your data
+- They require internet access
+- They can be slow or ad-filled
+
+QuickTransform runs locally. Your data never leaves your machine. It's instant, private, and works offline.
+
 ## Features
 
 | Category | Operations |
@@ -38,6 +47,7 @@ Download from [Releases](https://github.com/Brutus1066/QuickTransform/releases):
 |----------|-----|-----|
 | Windows | `qt.exe` (~1 MB) | `qt-gui.exe` (~4 MB) |
 | Linux | `qt` (~900 KB) | `qt-gui` (~4 MB) |
+| macOS | `qt` (~1 MB) | `qt-gui` (~5 MB) |
 
 ### From Source
 
@@ -155,6 +165,24 @@ src/
     hash.rs        # Hashing functions
     generate.rs    # Generation functions
 ```
+
+## Troubleshooting
+
+**GUI not starting on Linux?**
+Install GTK3 development libraries and rebuild:
+```bash
+sudo apt install libgtk-3-dev    # Ubuntu/Debian
+cargo build --release --features gui
+```
+
+**Command not found after install?**
+Add the install directory to your PATH:
+```bash
+export PATH="$PATH:$HOME/.local/bin"
+```
+
+**Build fails on Windows?**
+Ensure you have the MSVC toolchain installed via Visual Studio Build Tools.
 
 ## License
 
