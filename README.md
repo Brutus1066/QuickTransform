@@ -35,7 +35,8 @@ QuickTransform runs locally. Your data never leaves your machine. It's instant, 
 
 | Dark Theme | Light Theme |
 |------------|-------------|
-| ![Encode](screenshots/encode-dark.png) | ![Hash](screenshots/hash-light.png) |
+| ![Encode Dark](screenshots/encode-dark.png) | ![Hash Light](screenshots/hash-light.png) |
+| ![About Dark](screenshots/about-dark.png) | ![Quick Start Light](screenshots/quickstart-light.png) |
 
 ## Installation
 
