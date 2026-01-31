@@ -152,6 +152,9 @@ cargo test                            # Run tests
 
 # Linux
 ./scripts/install-linux.sh
+
+# macOS
+./scripts/install-macos.sh
 ```
 
 ## Project Structure
