@@ -2,6 +2,7 @@
 
 Lightning-fast encoder/decoder/hasher for the command line and desktop.
 
+[![Crates.io](https://img.shields.io/crates/v/quicktransform?logo=rust&logoColor=white)](https://crates.io/crates/quicktransform)
 [![Rust](https://img.shields.io/badge/Rust-1.70%2B-orange?logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![License](https://img.shields.io/github/license/Brutus1066/QuickTransform)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-blue)]()
@@ -39,6 +40,16 @@ QuickTransform runs locally. Your data never leaves your machine. It's instant, 
 | ![About Dark](screenshots/about-dark.png) | ![Quick Start Light](screenshots/quickstart-light.png) |
 
 ## Installation
+
+### From crates.io
+
+```bash
+# CLI only
+cargo install quicktransform
+
+# CLI + GUI
+cargo install quicktransform --features gui
+```
 
 ### Pre-built Binaries
 

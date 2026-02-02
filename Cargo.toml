@@ -2,15 +2,23 @@
 name = "quicktransform"
 version = "1.0.0"
 edition = "2021"
+rust-version = "1.70"
 authors = ["LAZYFROG <contact@kindware.dev>"]
 description = "Lightning-fast encoder/decoder/hasher CLI & GUI tool"
 license = "MIT"
-repository = "https://github.com/Brutus1066/quicktransform"
+repository = "https://github.com/Brutus1066/QuickTransform"
 homepage = "https://kindware.dev"
 keywords = ["cli", "encoder", "hash", "base64", "utility"]
 categories = ["command-line-utilities", "encoding"]
 readme = "README.md"
 build = "build.rs"
+exclude = [
+    "screenshots/",
+    "scripts/",
+    "assets/",
+    ".github/",
+    "target/",
+]
 
 [dependencies]
 # CLI
@@ -55,3 +63,4 @@ lto = true
 strip = true
 opt-level = "z"
 codegen-units = 1
+panic = "abort"
